@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="bp" prefHeight="480.0" prefWidth="820.0"
+            xmlns="http://javafx.com/javafx/17.0.12"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="pe.edu.upeu.asistencia.control.MainguiController">
+
+    <top>
+        <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+            <menus>
+                <Menu text="File">
+                    <items>
+                        <!-- Abre la vista de Tareas -->
+                        <MenuItem fx:id="miAdmTareas" text="Adm. Tareas" onAction="#abrirAdmTareas"/>
+                        <!-- Cierra la app -->
+                        <MenuItem fx:id="miClose" text="Close" onAction="#closeApp"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </top>
+
+    <center>
+        <!-- TabPane con ❌ en todas las pestañas -->
+        <TabPane fx:id="tabPanePrincipal"
+                 tabClosingPolicy="ALL_TABS"
+                 BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Inicio">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0"
+                                    prefHeight="200.0" prefWidth="200.0"/>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+
+</BorderPane>
